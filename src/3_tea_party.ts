@@ -60,7 +60,18 @@ export function attendATeaParty() {
 	return askQuestion('Press ENTER to continue! ', playCroquet);
 }
 
+
 function setTheTable(): Table {
+	const table: Table = { seats: [] };
 	// 👉 FIXME ❌
-	return { seats: [] };
-}
+	//return { seats: [] };
+	for (let i = 0; i < 4; i++) {
+		table.seats.push({
+			drink: {
+				type: 'Tea',
+				poured: true
+			}
+		})
+	}
+	return table;
+};
